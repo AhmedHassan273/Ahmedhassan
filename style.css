@@ -6,7 +6,8 @@
     --secondaryText: #4b5156;
     --themeDotBorder: #060313;
     --previewBg: rgba(238, 236, 227, 0.733);
-    --previewShadow: #f0ead6;
+    --previewShadow: #e9d79e;
+    --buttonColor: #3a3ac9;
 }
 
 html,
@@ -314,6 +315,49 @@ a {
 .post-intro {
     font-size: 18px;
     color: #4b5156;
+}
+
+#contact-form {
+    display: block;
+    margin: 0 auto;
+    max-width: 500px;
+    border: 1px solid var(--borderColor);
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 50px;
+    background-color: var(--mainColor);
+}
+
+#contact-form textarea {
+    resize: none;
+    font-size: 14px;
+    min-height: 100px;
+}
+
+.input-field {
+    width: 98%;
+    padding: 10px 1px 10px 5px;
+    border-radius: 5px;
+    background-color: var(--secondaryColor);
+    border: 1px solid #4b5156;
+    font-size: 14px;
+}
+
+#submit-btn {
+    width: 100%;
+    padding: 10px 0 10px 0;
+    margin-top: 10px;
+    color: #ffffff;
+    background-color: var(--buttonColor);
+    border: none;
+    font-size: 18px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.input-field:focus {
+    outline: none !important;
+    border: 1px solid #2b81e4;
 }
 
 @media screen and (max-width: 1200px) {
