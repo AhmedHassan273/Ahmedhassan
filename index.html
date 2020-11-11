@@ -33,12 +33,13 @@
 
                 <div class="left-column">
                     <img src="images/profile.jpg" alt="Profile Picture" id="profile-pic">
-                    <h5 style="text-align: center; line-height: 0;">Personalize Theme</h5>
-                    <div id="theme-wrapper">
-                        <div id="light-mode" class="theme-dot"></div>
-                        <div id="blue-mode" class="theme-dot"></div>
-                        <div id="green-mode" class="theme-dot"></div>
-                        <div id="purple-mode" class="theme-dot"></div>
+                    <h5 style="text-align: center; line-height: 0;">Dark Mode</h5>
+
+                    <div class="theme-switch-wrapper">
+                        <label class="theme-switch" for="checkbox">
+                            <input type="checkbox" id="checkbox" />
+                            <div class="slider round"></div>
+                        </label>
                     </div>
                     <p id="setting-note">"Theme settings will be saved for<br> your next visit"</p>
                 </div>
@@ -149,6 +150,7 @@
             </form>
         </div>
     </section>
+    <script src="app.js"></script>
 </body>
 
 </html>

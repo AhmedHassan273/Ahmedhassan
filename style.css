@@ -8,6 +8,20 @@
     --previewBg: rgba(238, 236, 227, 0.733);
     --previewShadow: #e9d79e;
     --buttonColor: #3a3ac9;
+    --linksColor: #0c0622;
+}
+
+[data-theme="dark"] {
+    --mainColor: #262629;
+    --secondaryColor: #373941;
+    --borderColor: #deeefd;
+    --mainText: #ffffff;
+    --secondaryText: #d8e6e3;
+    --themeDotBorder: #060313;
+    --previewBg: rgba(71, 69, 73, 0.76);
+    --previewShadow: #19181a;
+    --buttonColor: #3aacc9;
+    --linksColor: #dfd050;
 }
 
 html,
@@ -69,7 +83,7 @@ ol {
 
 a {
     text-decoration: none;
-    color: #318285;
+    color: var(--linksColor);
 }
 
 .s1 {
@@ -114,6 +128,67 @@ a {
     border-radius: 5px 5px 0 0;
     background-color: var(--mainColor);
     height: 45px;
+}
+
+
+/*slider switch css */
+
+.theme-switch-wrapper {
+    display: flex;
+    justify-content: center;
+    em {
+        margin-left: 10px;
+        font-size: 1rem;
+    }
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+
+.slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+}
+
+input:checked+.slider {
+    background-color: #66bb6a;
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
 }
 
 .dots-wrapper {
@@ -184,42 +259,6 @@ a {
     width: 200px;
     object-fit: cover;
     border: 2px solid var(--borderColor);
-}
-
-#theme-wrapper {
-    display: flex;
-    justify-content: center;
-}
-
-.theme-dot {
-    background-color: black;
-    height: 30px;
-    width: 30px;
-    border: 2px solid var(--themeDotBorder);
-    border-radius: 50%;
-    margin: 5px;
-    transition: 0.2s all;
-}
-
-.theme-dot:hover {
-    border-width: 5px;
-    cursor: pointer;
-}
-
-#light-mode {
-    background-color: var(--secondaryColor);
-}
-
-#blue-mode {
-    background-color: #1859d3;
-}
-
-#green-mode {
-    background-color: #2ed466;
-}
-
-#purple-mode {
-    background-color: #902be2;
 }
 
 #setting-note {
@@ -343,6 +382,10 @@ a {
     font-size: 14px;
 }
 
+::placeholder {
+    color: var(--mainText);
+}
+
 #submit-btn {
     width: 100%;
     padding: 10px 0 10px 0;
@@ -357,7 +400,7 @@ a {
 
 .input-field:focus {
     outline: none !important;
-    border: 1px solid #2b81e4;
+    border: 1px solid var(--borderColor);
 }
 
 @media screen and (max-width: 1200px) {
